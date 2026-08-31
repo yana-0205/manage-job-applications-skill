@@ -54,23 +54,41 @@ job-applications/
 
 Use [`examples/AGENTS.md`](examples/AGENTS.md) as a starting point. Add your own resume source files and, if you want strict visual consistency, a DOCX resume template. Do not commit private candidate data to a public repository.
 
-## Example prompts
+## How to use it
+
+The skill supports both **modular requests** and a **complete end-to-end application**. You do not need to describe the internal workflow or tell Codex which checks to run.
+
+### Use any step independently
+
+Attach a job link or paste the JD, then ask naturally:
 
 ```text
-Analyse this JD and tell me whether I meet the hard requirements before tailoring anything.
+Analyse this job description.
 ```
 
 ```text
-I want to apply for this role. Decide whether my current resume can be reused, then prepare the application materials.
+Check how well I match this role.
 ```
 
 ```text
-Tailor my resume to this JD, keep it to one page, and show me an evidence map before drafting.
+What are the core responsibilities and ATS keywords for this role?
 ```
 
 ```text
-Clean up duplicate resume versions and update my application tracker without changing unrelated rows.
+Should I use my current resume or tailor a new one for this position?
 ```
+
+```text
+Tailor my resume for this role.
+```
+
+### Trigger the complete workflow with one prompt
+
+```text
+I want to apply for this role.
+```
+
+For an end-to-end request, Codex uses the skill to run the full workflow automatically: eligibility screening, JD and ATS analysis, candidate-match assessment, resume reuse or tailoring decision, application-material creation, document QA, file management, and tracker updates. The final application package includes a submission-ready resume in both DOCX and PDF formats plus a tailored cover letter.
 
 ## Design principles
 

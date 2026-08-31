@@ -9,6 +9,15 @@ Treat the workspace `AGENTS.md` and user instructions as authoritative. Preserve
 
 Read `references/quality-checklist.md` before delivering application materials.
 
+## Route the request
+
+Support both modular requests and end-to-end applications.
+
+- When the user asks for one step, such as JD analysis, eligibility screening, match assessment, ATS keyword extraction, a resume-reuse decision, resume tailoring, file organisation, or tracker maintenance, perform that step without requiring the user to invoke the rest of the workflow.
+- Treat “I want to apply for this role,” “Apply for this position,” or equivalent wording as authorization to run the complete workflow. Analyse eligibility and fit, decide whether the current resume can be reused, create or tailor the application materials, verify the final documents, manage the application files, and update the tracker when one exists.
+- For the complete workflow, deliver a submission-ready resume as a matching DOCX/PDF pair and a tailored cover letter. Do not make the user enumerate the internal steps.
+- Pause only for a material hard-requirement failure, an ambiguous duplicate that could overwrite the wrong application, or essential missing evidence.
+
 ## Run the gates in order
 
 ### 1. Establish the application identity
