@@ -5,6 +5,7 @@
 - Check duplicates before producing new work.
 - State the recruitment market and hard-eligibility conclusion first.
 - Separate mandatory requirements from preferences.
+- Report an evidence-based overall match score out of 10 when evaluating candidate-role fit.
 - Do not let a fit score conceal a material eligibility failure.
 
 ## Evidence integrity
@@ -39,6 +40,9 @@
 - Inspect every rendered page for overflow, clipping, overlap, broken bullets, blank pages, alignment, spacing, and font consistency.
 - Confirm matching content, order, pagination, and line breaks across DOCX and PDF.
 - Preserve unrelated applications, historical files, tracker rows, formulas, and validations.
+- During an end-to-end application, update the tracker without requiring a separate request.
+- Populate supported existing fields such as date, company, role, status, next action, referrer, job ID, and URL from the JD, job page, context, application files, and system date.
+- Leave unsupported tracker values blank rather than inventing or requesting non-blocking information.
 
 ## Handoff quality
 

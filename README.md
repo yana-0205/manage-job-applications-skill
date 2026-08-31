@@ -10,13 +10,13 @@ From role analysis and eligibility screening to tailored documents, file managem
 
 2. **Break down the JD and ATS keywords:** Extract responsibilities, core requirements, tools, skills, domain terms, and repeated keywords. Separate mandatory requirements from preferences and improve the resume's relevance and discoverability for ATS screening without keyword stuffing or making unsupported claims.
 
-3. **Decide whether the current resume is ready:** Map each important JD requirement to verified candidate evidence, assess the match, and recommend either `Use the existing resume` or `Create a new tailored resume` instead of rewriting every application by default.
+3. **Score the match and decide whether the current resume is ready:** Map each important JD requirement to verified candidate evidence, report an overall match score out of 10, and recommend either `Use the existing resume` or `Create a new tailored resume` instead of rewriting every application by default.
 
 4. **Create evidence-based application materials:** Apply professional resume-editing principles to the positioning, experience order, project emphasis, and bullet structure. Produce a tailored one-page resume and cover letter while preventing invented skills, metrics, or outcomes.
 
 5. **Manage application files automatically:** Keep the current application's canonical DOCX/PDF files in `present/`, archive previous versions under `history/<Company>/<Role>/`, and clean up duplicate versions and temporary Office files.
 
-6. **Maintain the application tracker:** Detect previous applications, continue unfinished records, and update the existing tracker schema without creating duplicate rows or damaging formulas and formatting.
+6. **Maintain the application tracker automatically:** Detect previous applications, continue unfinished records, and populate the tracker's existing fields, including application date, company, role, status, next action, referrer, job ID, and job URL. Extract available values directly from the job link, JD, current application context, and system date without requiring a separate tracker prompt or asking the user to repeat known information.
 
 ## More than a resume-writing prompt
 
@@ -26,7 +26,7 @@ Most prompts stop at “rewrite my resume.” This skill manages the decisions, 
 
 It focuses on the parts generative AI often misses: deciding whether an application is worth pursuing, grounding every claim in real evidence, preserving verified metrics, checking the final rendered PDF, and leaving each application with clean, traceable files and records.
 
-> One job link. One instruction. A complete, evidence-based application workflow.
+> One job link. One instruction. Complete analysis, submission-ready documents, and an updated application record.
 
 ## Install
 
@@ -70,6 +70,8 @@ Analyse this job description.
 Check how well I match this role.
 ```
 
+The match assessment includes an evidence-based overall score out of 10.
+
 ```text
 What are the core responsibilities and ATS keywords for this role?
 ```
@@ -88,7 +90,7 @@ Tailor my resume for this role.
 I want to apply for this role.
 ```
 
-For an end-to-end request, Codex uses the skill to run the full workflow automatically: eligibility screening, JD and ATS analysis, candidate-match assessment, resume reuse or tailoring decision, application-material creation, document QA, file management, and tracker updates. The final application package includes a submission-ready resume in both DOCX and PDF formats plus a tailored cover letter.
+For an end-to-end request, Codex uses the skill to run the full workflow automatically: eligibility screening, JD and ATS analysis, a match score out of 10, resume reuse or tailoring decision, application-material creation, document QA, file management, and tracker maintenance. The final output includes the analysis, a submission-ready resume in both DOCX and PDF formats, a tailored cover letter, and an updated application record. No separate tracker request or repeated data entry is required.
 
 ## Design principles
 

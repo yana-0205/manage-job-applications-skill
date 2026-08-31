@@ -24,5 +24,7 @@ Treat files in `sources/` and facts explicitly confirmed by the user as the only
 
 - Treat existing spreadsheet headers as the complete schema.
 - Update an existing matching row instead of creating a duplicate.
+- Treat an end-to-end application request as authorization to update the tracker automatically.
+- Populate supported fields such as application date, company, role, status, next action, referrer, job ID, and URL from the job page, JD, active context, current application files, and system date.
 - Preserve formulas, validations, formatting, and unrelated rows.
 - Leave unsupported fields blank.

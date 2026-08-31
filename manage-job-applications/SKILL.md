@@ -14,8 +14,8 @@ Read `references/quality-checklist.md` before delivering application materials.
 Support both modular requests and end-to-end applications.
 
 - When the user asks for one step, such as JD analysis, eligibility screening, match assessment, ATS keyword extraction, a resume-reuse decision, resume tailoring, file organisation, or tracker maintenance, perform that step without requiring the user to invoke the rest of the workflow.
-- Treat “I want to apply for this role,” “Apply for this position,” or equivalent wording as authorization to run the complete workflow. Analyse eligibility and fit, decide whether the current resume can be reused, create or tailor the application materials, verify the final documents, manage the application files, and update the tracker when one exists.
-- For the complete workflow, deliver a submission-ready resume as a matching DOCX/PDF pair and a tailored cover letter. Do not make the user enumerate the internal steps.
+- Treat “I want to apply for this role,” “Apply for this position,” or equivalent wording as authorization to run the complete workflow. Analyse eligibility and fit, report an overall match score out of 10, decide whether the current resume can be reused, create or tailor the application materials, verify the final documents, manage the application files, and update the tracker when one exists.
+- For the complete workflow, deliver the analysis, a submission-ready resume as a matching DOCX/PDF pair, a tailored cover letter, and an updated application record. Do not make the user enumerate the internal steps or issue a separate tracker request.
 - Pause only for a material hard-requirement failure, an ambiguous duplicate that could overwrite the wrong application, or essential missing evidence.
 
 ## Run the gates in order
@@ -59,7 +59,7 @@ Extract the JD's core outcomes, responsibilities, repeated terms, tools, methods
 - `adjacent or transferable evidence`;
 - `unsupported`.
 
-Keep hard eligibility separate from general fit. Use exact JD terminology only when it truthfully describes the evidence. If the user requests a score, explain it briefly and never let the number obscure a hard-gate failure.
+Keep hard eligibility separate from general fit. Use exact JD terminology only when it truthfully describes the evidence. Report one evidence-based overall match score from `0/10` to `10/10` whenever evaluating candidate-role fit. Explain the score briefly and never let the number obscure a hard-gate failure.
 
 For a short JD-analysis request, report:
 
@@ -152,9 +152,11 @@ If the resume is underfilled, restore stronger verified evidence before changing
 
 ## Update the tracker precisely
 
-Edit a tracker only when requested or when the agreed workflow includes tracking. Inspect headers, formats, formulas, validations, and row conventions first. Treat existing headers as the complete schema.
+Update the tracker automatically during an end-to-end application request, or when the user requests tracker maintenance independently. Do not require an additional tracker prompt. Inspect headers, formats, formulas, validations, and row conventions first. Treat existing headers as the complete schema.
 
-Fill only values supported by the active JD, conversation, and current application files. Use the current system date for an application-date field. Leave unknown cells blank, preserve unrelated rows and formulas, and update an existing row instead of adding a duplicate.
+Populate every supported existing field, including application date, company, role, application status, next action, referrer, job ID, and job URL when those columns exist. Extract values from the job page or JD, the active conversation, the current application files, and the system date. Infer status and next action from the actual workflow state and reuse referrer information already present in context. Do not ask the user to repeat available information.
+
+Leave a field blank when it cannot be supported by those sources. Never invent a referrer, status, date, identifier, or next action. Preserve unrelated rows, formulas, validations, and formatting, and update an existing row instead of adding a duplicate.
 
 ## Report completion
 
