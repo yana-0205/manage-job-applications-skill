@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Job Applications"
+  short_description: "Screen, tailor, QA, and track job applications"
+  default_prompt: "Use $manage-job-applications to analyse this role, screen hard eligibility, and prepare truthful application materials."

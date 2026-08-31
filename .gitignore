@@ -1,0 +1,8 @@
+.DS_Store
+~$*
+*.tmp
+*.working.docx
+output/
+sources/
+records-of-applications.xlsx
+manage-job-applications/assets/*.docx
